@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#ffffff"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/loc_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserat_regular"
+                android:textColor="#000"
+                android:text="Tuban"
+                android:textSize="20dp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_pin"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <EditText
+                android:layout_below="@id/loc_user"
+                android:background="@drawable/input_border"
+                android:padding="10dp"
+                style="@style/body"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="text"
+                android:autofillHints="search"
+                android:hint="  cari jasa yang anda inginkan"
+                android:id="@+id/search_bar"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Categories"
+                style="@style/subheader"
+                android:layout_below="@id/search_bar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/cat"
+                android:layout_below="@id/search_bar"
+                android:text="see all"
+                style="@style/body"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentEnd="true"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hsv"
+                        android:layout_below="@id/cat">
+
+                        <LinearLayout
+                            android:id="@+id/cat_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/cat_makanan"
+                                android:layout_width="150dp"
+                                android:layout_height="200dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardCornerRadius="10dp"
+                                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/fb" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="20dp"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="#ffffff"
+                                        android:layout_alignParentBottom="true"
+                                        android:text="Makanan"/>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/cat_otomotif"
+                                android:layout_width="150dp"
+                                android:layout_height="200dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardCornerRadius="10dp"
+                                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/oto" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="20dp"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="#ffffff"
+                                        android:layout_alignParentBottom="true"
+                                        android:text="Otomotif"/>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/cat_musik"
+                                android:layout_width="150dp"
+                                android:layout_height="200dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                app:cardCornerRadius="10dp"
+                                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/cat" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="20dp"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="#ffffff"
+                                        android:layout_alignParentBottom="true"
+                                        android:text="Musik"/>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                    <LinearLayout
+                        android:id="@+id/swipeRefreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:orientation="vertical"
+                        android:layout_below="@id/hsv"
+                        android:layout_marginBottom="60dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ListTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@null" />
+                    </LinearLayout>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclercat"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_below="@id/cat"/>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerproduct"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_below="@id/recyclercat"/>-->
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

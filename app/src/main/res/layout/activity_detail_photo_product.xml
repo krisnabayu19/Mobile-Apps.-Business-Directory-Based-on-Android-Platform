@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.DetailPhotoProductActivity">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@id/layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/textpreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="#000"
+                    />
+                <TextView
+                    android:id="@+id/textpreview1"
+                    android:layout_below="@id/textpreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You can edit this photo after uploading"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/montserat_regular"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgPreview"
+                    android:layout_below="@id/textpreview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@color/colorPrimary"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop" />
+
+
+                <Button
+                    android:id="@+id/change_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="EDIT"
+                    android:layout_margin="20dp"
+                    android:padding="10dp"
+                    android:letterSpacing="0.2"
+                    android:drawablePadding="10dp"
+                    android:textAllCaps="false"
+                    style="@style/btn_alpa"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_delete"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    app:icon="@drawable/ic_outline_delete_outline_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="50dp"
+                    app:iconSize="24dp"
+                    android:backgroundTint="@color/red"
+                    app:iconPadding="0dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/layout_2"
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editTextId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Id Data "
+                    android:visibility="gone"
+
+                    style="@style/body2"/>
+                <EditText
+                    android:id="@+id/id_data"
+                    android:layout_width="match_parent"
+                    android:hint="Id Data"
+                    android:inputType="text"
+                    style="@style/body"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_outline_place_24"
+                    android:drawablePadding="10dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="update"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/white"
+            android:background="@drawable/button_rounded"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

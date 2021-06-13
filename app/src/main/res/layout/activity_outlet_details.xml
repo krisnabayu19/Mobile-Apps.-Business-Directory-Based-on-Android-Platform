@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.OutletDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/userthumb"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="4dp" />
+
+        <TextView
+            android:id="@+id/admin_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/imgPreview"
+            android:layout_toRightOf="@id/imgPreview"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="Fullname"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/admin_address"
+            style="@style/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/admin_fullname"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imgPreview"
+            android:hint="Address" />
+
+
+        <TextView
+            android:id="@+id/admin_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/admin_address"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imgPreview"
+            android:fontFamily="@font/montserat_regular"
+            android:text="Email"
+            android:textColor="?android:attr/textColorSecondary" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:drawableStart="@drawable/ic_outline_account_circle_24"
+            android:drawablePadding="15dp"
+            android:text="Edit Profile"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"/>
+        <View
+            style="@style/view"
+            />
+        <Button
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_outline_security_24"
+            android:drawablePadding="15dp"
+            android:text="Edit Password"
+            android:textColor="#000"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"/>
+        <View
+            style="@style/view"
+            />
+
+
+
+
+
+        <Button
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="15dp"
+            android:text="Create Bisnis"
+            android:textColor="#000"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:drawableStart="@drawable/ic_outline_info_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"/>
+        <View
+            style="@style/view"
+            />
+        <Button
+            android:id="@+id/listdatabisnis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List Bisnis"
+            android:textColor="#000"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/ic_outline_monetization_on_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"/>
+        <View
+            style="@style/view"
+            />
+        <Button
+            android:id="@+id/managephoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manages Photos"
+            android:drawablePadding="15dp"
+            android:textColor="#000"
+            android:drawableStart="@drawable/ic_outline_photo_library_24"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"/>
+        <View
+            style="@style/view"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
